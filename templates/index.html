@@ -53,6 +53,9 @@
             for (let i = 0; i < articles.length; i++) {
               let title = articles[i]["title"];
               let content = articles[i]["content"];
+              
+              let time = articles[i]["time"] || '????.??.??';
+              
               let file = articles[i]["file"] || "default_image.jpg";
               let profile = articles[i]["profile"];
               let temp_html = `
