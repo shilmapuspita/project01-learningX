@@ -60,13 +60,15 @@ def save_diary():
         # Simpan file di folder 'static'
         profile.save(profilename)
 
+        time= today.strftime('%Y.%m.%d')
 
         # Menyusun dokumen untuk disimpan
         doc = {
             'file': filename,
             'profile': profilename,
             'title': title_receive,
-            'content': content_receive
+            'content': content_receive,
+            'time' : time,
         }
 
         # Menyimpan dokumen ke MongoDB
